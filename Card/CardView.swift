@@ -7,12 +7,27 @@
 
 import UIKit
 
-
+@IBDesignable
 class CardView: UIView {
     
+    @IBInspectable
     var rank: Int = 12 { didSet {setNeedsDisplay(); setNeedsLayout()}}
+    @IBInspectable
     var suit: String = "♥️" { didSet {setNeedsDisplay(); setNeedsLayout()}}
-    var isFaceUp: Bool = true { didSet {setNeedsDisplay(); setNeedsLayout()}}
+    @IBInspectable
+    var isFaceUp: Bool = false { didSet {setNeedsDisplay(); setNeedsLayout()}}
+    
+    var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize { didSet { setNeedsDisplay() } }
+    
+    // Create a handler for the pinch gesture
+    @objc func adjustFaceCardScale(byHandlingGestureRecognizedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .ended, .changed:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default: break
+        }
+    }
     
     private var cornerString: NSAttributedString {
         return centeredAttributedString(rankString+"\n"+suit, fontSize: cornerFontSize)
@@ -31,10 +46,15 @@ class CardView: UIView {
         UIColor.white.setFill()
         roundedRect.fill()
         
-        if let faceCardImage = UIImage(named: rankString+suit) {
-            faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+        if isFaceUp {
+            if let faceCardImage = UIImage(named: rankString+suit, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
+            } else {
+                drawPips()
+            }
         } else {
-            drawPips()
+            let backOfCardImage = UIImage(named: "stanford-tree", in: Bundle(for: self.classForCoder), compatibleWith: traitCollection)
+            backOfCardImage!.draw(in: bounds.zoom(by: faceCardScale))
         }
         
         /* Draw corner using draw function instead of subview, which only works 75%

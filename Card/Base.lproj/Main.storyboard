@@ -17,23 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8Fj-v8-lvz" customClass="CardView" customModule="Card" customModuleProvider="target">
-                                <rect key="frame" x="20" y="147" width="350" height="560"/>
+                                <rect key="frame" x="238" y="62" width="75" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8Fj-v8-lvz" secondAttribute="height" multiplier="5:8" id="7Ee-vu-ZxA"/>
-                                    <constraint firstAttribute="height" priority="999" constant="800" id="ySe-sW-jxa"/>
+                                    <constraint firstAttribute="height" priority="999" constant="120" id="ySe-sW-jxa"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GwK-0Z-b1j" appends="YES" id="fTA-n3-tZq"/>
+                                </connections>
+                            </view>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zar-Zm-1jB" customClass="CardView" customModule="Card" customModuleProvider="target">
+                                <rect key="frame" x="104" y="203" width="75" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zar-Zm-1jB" secondAttribute="height" multiplier="5:8" id="RM1-UN-ofI"/>
+                                    <constraint firstAttribute="height" priority="999" constant="120" id="s42-56-ICk"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Fj-v8-lvz" secondAttribute="bottom" constant="20" id="6rW-cF-UcZ"/>
-                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Cb9-BS-RnF"/>
-                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dhF-E4-czo"/>
-                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g5g-re-sa0"/>
-                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kR1-Xj-L3v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Fj-v8-lvz" secondAttribute="trailing" constant="20" id="of4-yW-3Wt"/>
+                            <constraint firstItem="Zar-Zm-1jB" firstAttribute="width" secondItem="Zar-Zm-1jB" secondAttribute="height" multiplier="5:8" id="Poi-em-GBA"/>
+                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="ShC-eH-1VC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zar-Zm-1jB" secondAttribute="trailing" constant="211" id="Zru-9g-Rx8"/>
+                            <constraint firstItem="Zar-Zm-1jB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="byZ-v5-RBs"/>
+                            <constraint firstItem="8Fj-v8-lvz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="f1T-cc-cFE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -41,8 +53,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GwK-0Z-b1j">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="277-y4-I6l"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
+            <point key="canvasLocation" x="135.38461538461539" y="83.175355450236964"/>
         </scene>
     </scenes>
     <resources>
