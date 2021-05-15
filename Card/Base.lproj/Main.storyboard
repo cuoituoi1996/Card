@@ -26,7 +26,7 @@
                                 </constraints>
                             </view>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zar-Zm-1jB" customClass="CardView" customModule="Card" customModuleProvider="target">
-                                <rect key="frame" x="104" y="203" width="75" height="120"/>
+                                <rect key="frame" x="101" y="226" width="75" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -68,25 +68,48 @@
                                     <constraint firstAttribute="height" priority="999" constant="120" id="Oid-co-hhF"/>
                                 </constraints>
                             </view>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LNj-8k-ogq" customClass="CardView" customModule="Card" customModuleProvider="target">
+                                <rect key="frame" x="238" y="644" width="75" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LNj-8k-ogq" secondAttribute="height" multiplier="5:8" id="Ta8-zn-YoP"/>
+                                    <constraint firstAttribute="height" priority="999" constant="120" id="xgR-sn-SPX"/>
+                                </constraints>
+                            </view>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="17u-NU-ILx" customClass="CardView" customModule="Card" customModuleProvider="target">
+                                <rect key="frame" x="76" y="75" width="75" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="17u-NU-ILx" secondAttribute="height" multiplier="5:8" id="bLW-uF-egr"/>
+                                    <constraint firstAttribute="height" priority="999" constant="120" id="yns-St-Oul"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="vil-Jp-i9u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="225" id="6ly-Lb-fLp"/>
+                            <constraint firstItem="Zar-Zm-1jB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="APt-5z-8Jv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vil-Jp-i9u" secondAttribute="trailing" constant="90" id="BM0-5W-Pz2"/>
                             <constraint firstItem="zCy-EM-4qe" firstAttribute="width" secondItem="zCy-EM-4qe" secondAttribute="height" multiplier="5:8" id="BMK-3L-Pc4"/>
                             <constraint firstItem="zCy-EM-4qe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="271" id="DhT-jw-0zm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o3r-4p-QAC" secondAttribute="trailing" constant="201" id="Fwe-5O-eNV"/>
+                            <constraint firstItem="17u-NU-ILx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="IPv-ls-1g0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vil-Jp-i9u" secondAttribute="bottom" constant="191" id="LUZ-0q-nDm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCy-EM-4qe" secondAttribute="trailing" constant="77" id="RgG-aH-eFq"/>
                             <constraint firstItem="8Fj-v8-lvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="238" id="ShC-eH-1VC"/>
+                            <constraint firstItem="17u-NU-ILx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="VWX-lK-1Dz"/>
                             <constraint firstItem="o3r-4p-QAC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="561" id="Xd4-Gf-9NU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zar-Zm-1jB" secondAttribute="trailing" constant="211" id="Zru-9g-Rx8"/>
                             <constraint firstItem="vil-Jp-i9u" firstAttribute="width" secondItem="vil-Jp-i9u" secondAttribute="height" multiplier="5:8" id="aL5-Bl-29X"/>
-                            <constraint firstItem="Zar-Zm-1jB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="159" id="byZ-v5-RBs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LNj-8k-ogq" secondAttribute="bottom" constant="46" id="ds5-r1-rw2"/>
                             <constraint firstItem="8Fj-v8-lvz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="f1T-cc-cFE"/>
+                            <constraint firstItem="LNj-8k-ogq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="600" id="fiV-PD-GD8"/>
+                            <constraint firstItem="Zar-Zm-1jB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="k9B-kc-Tuv"/>
                             <constraint firstItem="TZr-Kp-Npt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="rYO-aR-6Hb"/>
                             <constraint firstItem="TZr-Kp-Npt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="384" id="sUU-zY-oMX"/>
+                            <constraint firstItem="vil-Jp-i9u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="455" id="w4a-M4-yYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LNj-8k-ogq" secondAttribute="trailing" constant="77" id="zag-lv-lsn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -96,6 +119,8 @@
                         <outletCollection property="cardViews" destination="vil-Jp-i9u" collectionClass="NSMutableArray" id="bLf-Ax-pcL"/>
                         <outletCollection property="cardViews" destination="8Fj-v8-lvz" collectionClass="NSMutableArray" id="ljs-u8-YH9"/>
                         <outletCollection property="cardViews" destination="o3r-4p-QAC" collectionClass="NSMutableArray" id="U9m-tn-ary"/>
+                        <outletCollection property="cardViews" destination="17u-NU-ILx" collectionClass="NSMutableArray" id="vNP-aC-Qsm"/>
+                        <outletCollection property="cardViews" destination="LNj-8k-ogq" collectionClass="NSMutableArray" id="BPs-QJ-7wP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
